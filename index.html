@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f7fb" />
+    <meta
+      name="description"
+      content="여러 참석자의 상황을 수집해 가장 확정하기 좋은 회의 시간을 추천하는 Meet Fit UX Case Study"
+    />
+    <meta property="og:title" content="Meet Fit · UX Case Study" />
+    <meta
+      property="og:description"
+      content="Better context, faster decisions. 조건 기반 회의 시간 조율 UX"
+    />
+    <title>Meet Fit · UX Case Study</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Meet Fit 처음으로">
+          <span class="brand-mark">M</span>
+          <span>Meet Fit</span>
+        </a>
+        <nav class="site-nav" aria-label="페이지 내 이동">
+          <a href="#problem">Problem</a>
+          <a href="#principle">Principle</a>
+          <a href="#flow">Flow</a>
+        </nav>
+        <a class="button button-small" href="#prototype">Prototype 보기</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">TOSS DESIGNER CHALLENGE</p>
+            <h1>Meet Fit</h1>
+            <p class="hero-headline">
+              조건을 모아, 가장 확정하기 좋은<br />
+              회의 시간을 추천하는 조율 UX
+            </p>
+            <p class="hero-description">
+              여러 참석자의 가능한 시간과 피하고 싶은 조건을 수집해,
+              회의 주체자의 비교 부담을 줄이고 결정을 빠르게 만드는 UX입니다.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="button button-primary"
+                href="https://www.figma.com/proto/3nVbSUmflOyFsFRJkMxxob/project?page-id=0%3A1&amp;node-id=2-2&amp;viewport=191%2C91%2C0.25&amp;t=ciEdPVHM5AYH5UnZ-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;starting-point-node-id=2%3A2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Main Prototype 보기 <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                class="button button-secondary"
+                href="https://www.figma.com/proto/3nVbSUmflOyFsFRJkMxxob/project?page-id=0%3A1&amp;node-id=20-2&amp;viewport=191%2C91%2C0.25&amp;"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Alternative Flow 보기 <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal" aria-label="Meet Fit 주요 화면 미리보기">
+            <div class="visual-orbit" aria-hidden="true"></div>
+            <figure class="product-shot desktop-shot">
+              <img
+                src="assets/owner-start.png?v=5"
+                alt="회의 주체자가 회의 시간 조율을 시작하는 PC 화면"
+              />
+            </figure>
+            <figure class="product-shot mobile-shot">
+              <img
+                src="assets/attendee-request.png?v=5"
+                alt="참석자가 회의 참석 요청에 응답하는 모바일 화면"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="problem">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">PROBLEM</p>
+            <h2>회의 조율은 ‘빈 시간 찾기’보다 복잡합니다.</h2>
+            <p>
+              가능 여부만 비교하면 실제 결정에 필요한 맥락이 사라집니다. 여러 명이
+              참여하는 회의에서는 시간, 조건, 응답 상태와 후속 공유까지 함께 고려해야 합니다.
+            </p>
+          </div>
+
+          <div class="problem-layout">
+            <div class="problem-grid">
+              <article class="info-card reveal">
+                <span class="index blue">01</span>
+                <h3>가능한 시간</h3>
+                <p>누가 언제 참여할 수 있는가</p>
+              </article>
+              <article class="info-card reveal">
+                <span class="index amber">02</span>
+                <h3>피하고 싶은 조건</h3>
+                <p>연속 회의, 이른 시간, 늦은 시간</p>
+              </article>
+              <article class="info-card reveal">
+                <span class="index green">03</span>
+                <h3>응답 여부</h3>
+                <p>아직 답하지 않은 사람이 있는가</p>
+              </article>
+              <article class="info-card reveal">
+                <span class="index coral">04</span>
+                <h3>후속 공유</h3>
+                <p>참석이 어려운 사람에게 무엇을 남길까</p>
+              </article>
+            </div>
+
+            <aside class="burden-card reveal">
+              <span class="dark-label">MEETING OWNER'S BURDEN</span>
+              <h3>모든 조건을 직접 비교해야 합니다.</h3>
+              <p>
+                사람을 필수/선택으로 나누는 순간, 회의 주체자는 사람의 중요도까지
+                사전에 판단해야 합니다.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tinted" id="reframing">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">REFRAMING</p>
+            <h2>사람을 나누는 대신, 상황을 수집합니다.</h2>
+            <p>사람의 중요도를 정하는 문제를 각자의 상황을 표현하는 문제로 바꿨습니다.</p>
+          </div>
+
+          <div class="reframe-comparison reveal">
+            <article class="compare-card compare-before">
+              <span class="tag tag-muted">BEFORE</span>
+              <h3>필수 참석자 / 선택 참석자</h3>
+              <p>회의 주체자가 사람의 중요도를 미리 분류해야 한다.</p>
+            </article>
+            <div class="compare-arrow" aria-hidden="true">→</div>
+            <article class="compare-card compare-after">
+              <span class="tag tag-blue">MEET FIT</span>
+              <h3>참석 가능한 시간 + 조건</h3>
+              <p>참석자가 상황을 선택하고, 시스템이 결정 가능한 형태로 정리한다.</p>
+            </article>
+          </div>
+
+          <div class="transition-callout reveal">
+            <span>핵심 전환</span>
+            <strong>‘누가 더 중요한가?’에서 ‘각자 어떤 상황인가?’로</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="principle">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">UX PRINCIPLE</p>
+            <h2>사람을 분류하지 않고, 상황을 수집한다.</h2>
+            <p>Meet Fit의 모든 입력과 추천 방식은 이 원칙에서 출발합니다.</p>
+          </div>
+
+          <blockquote class="principle-quote reveal">
+            “참석자는 중요도가 아니라, 지금 가능한 상황으로 응답합니다.”
+          </blockquote>
+
+          <div class="principle-grid">
+            <article class="principle-card reveal">
+              <span class="index blue">01</span>
+              <h3>참석 가능한 시간이 있어요</h3>
+              <p>가능한 슬롯을 직접 선택</p>
+            </article>
+            <article class="principle-card reveal">
+              <span class="index amber">02</span>
+              <h3>조건이 있어요</h3>
+              <p>피하고 싶은 상황을 함께 입력</p>
+            </article>
+            <article class="principle-card reveal">
+              <span class="index coral">03</span>
+              <h3>참석이 어려워요</h3>
+              <p>회의 내용 공유 흐름으로 연결</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tinted" id="flow">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">MAIN FLOW</p>
+            <h2>입력은 참석자가,<br />결정은 회의 주체자가 합니다.</h2>
+            <p>PC와 App을 오가며 복잡한 조건을 하나의 확정 흐름으로 연결합니다.</p>
+          </div>
+
+          <ol class="flow-track reveal">
+            <li>
+              <span class="flow-number">1</span>
+              <span class="role role-owner">회의 주체자 / PC</span>
+              <strong>회의 생성</strong>
+            </li>
+            <li>
+              <span class="flow-number">2</span>
+              <span class="role role-attendee">참석자 / App</span>
+              <strong>참석자 응답</strong>
+            </li>
+            <li>
+              <span class="flow-number">3</span>
+              <span class="role role-attendee">참석자 / App</span>
+              <strong>조건 입력</strong>
+            </li>
+            <li>
+              <span class="flow-number">4</span>
+              <span class="role role-owner">회의 주체자 / PC</span>
+              <strong>추천 후보 확인</strong>
+            </li>
+            <li>
+              <span class="flow-number">5</span>
+              <span class="role role-owner">회의 주체자 / PC</span>
+              <strong>회의 확정</strong>
+            </li>
+          </ol>
+
+          <div class="system-note reveal">
+            <span>SYSTEM</span>
+            <p>응답과 조건을 계산해 ‘가장 확정하기 좋은 시간’과 이유를 정리합니다.</p>
+          </div>
+
+          <div class="screen-grid">
+            <figure class="screen-card screen-mobile reveal">
+              <div class="screen-media">
+                <img src="assets/flow-attendee-request.png?v=1" alt="회의 참석 요청에 응답하는 모바일 화면" loading="lazy" />
+              </div>
+              <figcaption><span>RESPOND</span><strong>App — 회의 참석 요청</strong></figcaption>
+            </figure>
+            <figure class="screen-card screen-mobile reveal">
+              <div class="screen-media">
+                <img src="assets/flow-attendee-time-select.png?v=1" alt="참석 가능한 1시간 슬롯을 선택하는 모바일 화면" loading="lazy" />
+              </div>
+              <figcaption><span class="label-select">SELECT</span><strong>App — 1시간 슬롯 선택</strong></figcaption>
+            </figure>
+            <figure class="screen-card screen-desktop reveal">
+              <div class="screen-media">
+                <img src="assets/flow-owner-recommend.png?v=1" alt="추천 후보와 추천 이유를 확인하는 PC 전체 화면" loading="lazy" />
+              </div>
+              <figcaption><span class="label-decide">DECIDE</span><strong>PC — 추천 후보 확인</strong></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="decision">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">DECISION LOGIC</p>
+            <h2>추천은 네 가지 기준을 순서대로 고려합니다.</h2>
+            <p>복잡한 계산은 시스템이 처리하고, 화면에는 추천 결과와 이유만 남깁니다.</p>
+          </div>
+
+          <div class="decision-layout">
+            <ol class="criteria-list">
+              <li class="reveal">
+                <span class="index blue">01</span>
+                <div>
+                  <strong>참석 가능한 사람이 가장 많은 시간</strong>
+                  <span>참여 가능성</span>
+                </div>
+              </li>
+              <li class="reveal">
+                <span class="index amber">02</span>
+                <div>
+                  <strong>피하고 싶은 조건과 충돌이 적은 시간</strong>
+                  <span>조건 적합성</span>
+                </div>
+              </li>
+              <li class="reveal">
+                <span class="index coral">03</span>
+                <div>
+                  <strong>회의 내용 공유 대상이 적은 시간</strong>
+                  <span>후속 부담</span>
+                </div>
+              </li>
+              <li class="reveal">
+                <span class="index green">04</span>
+                <div>
+                  <strong>응답 대기자가 적은 시간</strong>
+                  <span>확정 가능성</span>
+                </div>
+              </li>
+            </ol>
+
+            <aside class="recommend-card reveal">
+              <span class="recommend-label">RECOMMENDED</span>
+              <h3>화요일 14:00</h3>
+              <p>가장 확정하기 좋은 시간</p>
+              <ul>
+                <li>참석 가능 <strong>8명</strong></li>
+                <li>조건 충돌 <strong>1건</strong></li>
+                <li>공유 대상 <strong>1명</strong></li>
+                <li>응답 대기 <strong>0명</strong></li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tinted" id="prototype">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">FIGMA PROTOTYPE</p>
+            <h2>두 가지 흐름으로 핵심 가설을 검증했습니다.</h2>
+            <p>기본 조율 흐름과 참석이 어려운 상황의 대안 흐름을 확인할 수 있습니다.</p>
+          </div>
+
+          <div class="prototype-grid">
+            <article class="prototype-card reveal">
+              <div class="prototype-copy">
+                <span class="tag tag-blue">MAIN PROTOTYPE</span>
+                <h3>기본 조율 흐름</h3>
+                <p>회의 생성 → 참석자 응답 → 조건 입력 → 추천 → 확정</p>
+                <a
+                  class="button button-primary"
+                  href="https://www.figma.com/proto/3nVbSUmflOyFsFRJkMxxob/project?page-id=0%3A1&amp;node-id=2-2&amp;viewport=191%2C91%2C0.25&amp;t=ciEdPVHM5AYH5UnZ-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;starting-point-node-id=2%3A2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Main Prototype 열기 <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="prototype-card reveal">
+              <div class="prototype-copy">
+                <span class="tag tag-green">ALTERNATIVE FLOW</span>
+                <h3>참석이 어려운 상황의 대안 흐름</h3>
+                <p>가능한 시간이 없는 참석자를 회의 내용 공유 흐름으로 연결합니다.</p>
+                <a
+                  class="button button-green"
+                  href="https://www.figma.com/proto/3nVbSUmflOyFsFRJkMxxob/project?page-id=0%3A1&amp;node-id=20-2&amp;viewport=191%2C91%2C0.25&amp;"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Alternative Flow 열기 <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section summary" id="summary">
+        <div class="container">
+          <div class="summary-heading reveal">
+            <p class="eyebrow">SUMMARY</p>
+            <h2>‘시간 탐색’을 ‘결정 가능한 추천’으로.</h2>
+            <p>
+              사람을 분류하지 않고 상황을 수집해, 더 빠르고 설명 가능한 회의 확정을 돕습니다.
+            </p>
+          </div>
+
+          <ol class="summary-steps reveal">
+            <li>
+              <span>1</span>
+              <strong>Collect</strong>
+              <p>상황을 수집</p>
+            </li>
+            <li>
+              <span>2</span>
+              <strong>Recommend</strong>
+              <p>결정 근거를 정리</p>
+            </li>
+            <li>
+              <span>3</span>
+              <strong>Decide</strong>
+              <p>빠르게 확정</p>
+            </li>
+          </ol>
+
+          <div class="closing-cta reveal">
+            <div>
+              <p>Meet Fit · Better context, faster decisions.</p>
+              <span>프로토타입에서 전체 조율 흐름을 확인해보세요.</span>
+            </div>
+            <a
+              class="button button-light"
+              href="https://www.figma.com/proto/3nVbSUmflOyFsFRJkMxxob/project?page-id=0%3A1&amp;node-id=2-2&amp;viewport=191%2C91%2C0.25&amp;t=ciEdPVHM5AYH5UnZ-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;starting-point-node-id=2%3A2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Prototype 보기 <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Meet Fit · Better context, faster decisions.</p>
+        <a href="#top">맨 위로 ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
